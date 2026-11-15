@@ -2,9 +2,9 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-diabetes_model = pickle.load(open('C:/Users/sanjay/Documents/multi_prediction_web_app/models/diabetes_model.sav','rb'))
-heart_model = pickle.load(open('C:/Users/sanjay/Documents/multi_prediction_web_app/models/heart_model.sav','rb'))
-parkinson_model = pickle.load(open('C:/Users/sanjay/Documents/multi_prediction_web_app/models/parkinson_model.sav','rb'))
+diabetes_model = pickle.load(open('models/diabetes_model.sav','rb'))
+heart_model = pickle.load(open('models/heart_model.sav','rb'))
+parkinson_model = pickle.load(open('models/parkinson_model.sav','rb'))
 
 with st.sidebar:
     selected = option_menu('Multi Prediction in ML',['Diabetes','Heart','Parkinson'],icons=['activity','heart','person'],default_index=0)
